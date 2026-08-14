@@ -81,6 +81,13 @@ This repository contains multiple STM32-based servo control projects using the S
 - More powerful processor with enhanced capabilities
 - Different peripheral configurations and features
 
+### 13. ESP_32_PROJECTS
+**ESP32-Based Servo Control Projects**
+- Projects utilizing ESP32 microcontrollers for servo control
+- WiFi-enabled servo control implementations
+- Integration of wireless communication with servo systems
+- Advanced IoT-based robotic control solutions
+
 ## Getting Started
 
 All projects are built using STM32CubeIDE and use HAL libraries. To get started:
