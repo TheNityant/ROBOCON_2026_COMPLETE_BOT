@@ -82,11 +82,13 @@ This repository contains multiple STM32-based servo control projects using the S
 - Different peripheral configurations and features
 
 ### 13. ESP_32_PROJECTS
-**ESP32-Based Servo Control Projects**
-- Projects utilizing ESP32 microcontrollers for servo control
-- WiFi-enabled servo control implementations
-- Integration of wireless communication with servo systems
-- Advanced IoT-based robotic control solutions
+**ESP32-Based Robotic Control Projects**
+- Comprehensive collection of ESP32-based projects for robotic control
+- Includes servo control implementations with various sensors and interfaces
+- WiFi-enabled robotic systems with wireless communication capabilities
+- Integration of multiple motor types (servo, stepper) with ESP32 controllers
+- Advanced IoT-based robotic control solutions with sensor feedback
+- Projects include PS4 controller interfacing, ultrasonic sensing, and multi-motor control
 
 ## Getting Started
 
