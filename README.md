@@ -1,7 +1,7 @@
-# 🤖 Servo & Embedded Control Projects
+# 🤖 ROBOCON 2026 — Embedded Robot Control
 
 <p align="center">
-  <strong>A collection of STM32 and ESP32-based experiments exploring servo control, motor control, controller interfaces, sensing, and robotic mechanisms.</strong>
+  <strong>A collection of embedded-control systems developed around robotic locomotion, servo mechanisms, controller interfaces, sensing, and picking mechanisms.</strong>
 </p>
 
 <p align="center">
@@ -13,208 +13,39 @@
 
 ---
 
-## 🎥 Demonstration
+## 🎥 Hardware Demo
 
 <p align="center">
-  <a href="YOUR_YOUTUBE_URL">
-    <img src="YOUR_VIDEO_THUMBNAIL_URL"
-         width="800"
-         alt="Servo and robotic control demonstration">
-  </a>
+  <img
+    src="GIF/ROBOCON_demo_ultra.gif"
+    width="100%"
+    alt="ROBOCON 2026 robot hardware demonstration"
+  />
 </p>
 
 <p align="center">
-  <i>Hardware demonstration of servo and robotic control systems.</i>
+  <sub>Physical robot and mechanism testing during the ROBOCON development cycle.</sub>
 </p>
 
 ---
 
 ## 🧭 Overview
 
-This repository preserves a collection of embedded-control projects developed while working with **STM32 and ESP32 microcontrollers**.
+This repository preserves embedded-control experiments developed while working with **STM32 and ESP32 microcontrollers** for robotic mechanisms and competition-oriented systems.
 
-The projects range from basic single-servo experiments to multi-servo systems, controller-driven mechanisms, sensor-based actuation, stepper motor integration, and robotic locomotion control.
+The work progresses from individual actuator control to integrated systems involving:
 
-The STM32 projects primarily use **STM32CubeIDE, HAL peripherals, UART communication, and embedded C**, while the ESP32 collection explores additional controller and sensor interfaces.
-
----
-
-# 🔵 STM32 Projects
-
-## 1. SERVO_UART
-
-**Single-servo control through UART**
-
-Basic servo control using UART communication between the host/interface and STM32.
+- servo control,
+- multi-servo coordination,
+- stepper control,
+- controller-driven mechanisms,
+- locomotion,
+- sensor-based actuation,
+- and robotic picking mechanisms.
 
 ---
 
-## 2. MULTI_SERVO_UART
-
-**Multi-servo control through UART**
-
-Controls multiple servos through a shared UART-based interface.
-
-Focus areas:
-
-- Multi-servo communication
-- UART handling
-- STM32 HAL
-- Real-time servo control
-
----
-
-## 3. PS4_SERVO_CONTROLLED
-
-**PS4 controller → ESP receiver → STM32 → servo**
-
-A controller-based servo control system using an ESP-based receiver to transmit PS4 controller input to the STM32.
-
----
-
-## 4. PS4_PICKING_MECHANISM_CONTROLLED
-
-**PS4-controlled robotic picking mechanism**
-
-A servo-control implementation developed for operating a robotic picking mechanism through a PS4 controller interface.
-
----
-
-## 5. SERVO_WORK_MODE
-
-**Servo operating-mode experiments**
-
-Experiments with different servo operating modes and motion patterns for embedded robotic applications.
-
----
-
-## 6. SERVO_STEPPER_INTEGRATION
-
-**Servo and stepper motor integration**
-
-Combines servo and stepper motor control within a single embedded system.
-
----
-
-## 7. PS4_SERVO_STEPPER_CTRL
-
-**PS4-controlled servo and stepper system**
-
-Integrates PS4 controller input with coordinated servo and stepper motor control.
-
----
-
-## 8. PS4_SERVO_STEPPER_LOCO_CONTROLLED
-
-**Controller-based locomotion control**
-
-A locomotion-oriented control implementation combining servo and stepper actuation with PS4 controller input.
-
----
-
-## 9. R1_PICKING_MECHANISM
-
-**R1 picking mechanism control**
-
-Control implementation developed around the R1 robotic picking mechanism.
-
----
-
-## 10. SERVO_ANGLE_CONTROL
-
-**Servo positioning and angle control**
-
-Experiments focused on servo positioning, angle control, and calibration.
-
----
-
-## 11. STM_F4
-
-**STM32F4 control experiments**
-
-Embedded-control projects developed on the STM32F4 platform, exploring peripherals and control implementations on a higher-performance STM32 family.
-
----
-
-# 🟠 ESP32 Projects
-
-The `ESP_32_PROJECTS` collection contains additional experiments involving servo control, sensors, controller interfaces, and motor control.
-
-### Servo Control
-
-| Project | Focus |
-|---|---|
-| `SERVO` | Basic UART servo control with velocity-mode support |
-| `MULTI_SERVO_USER_DEGREE_CONTROLLED` | Individual servo positioning using user-defined angles |
-| `SERVO_CW_CCW` | Clockwise and counter-clockwise continuous rotation |
-| `SERVO_SIMPLE_SWEEP` | Servo sweep between defined angle limits |
-| `SERVO_USER_CONTROLLED` | User-controlled servo positioning |
-| `USER_CONTROLLED_SERVO` | Alternative user-driven servo control implementation |
-
-### Sensor Integration
-
-| Project | Focus |
-|---|---|
-| `ULTRASONIC_SERVO_CONTROLLED` | Servo positioning based on ultrasonic distance |
-| `MULTI_SERVO_USER_DISTANCE_CONTROLLED` | Multi-servo control using distance input |
-| `SERVP_CHECK_CODE` | Sensor and servo-system verification |
-
-### Controller Interface
-
-| Project | Focus |
-|---|---|
-| `PS4_I2C_STM` | PS4 controller interface using Bluetooth and ESP-based communication |
-
-### Stepper Control
-
-| Project | Focus |
-|---|---|
-| `STEPPER_MOTOR_CONTROL` | Stepper motor control experiments |
-
-### Servo Bus / Configuration
-
-| Project | Focus |
-|---|---|
-| `SERVO_ID_CHANGE` | Servo ID configuration for multi-servo bus systems |
-
----
-
-# ⚙️ Technical Areas
-
-### Embedded Systems
-
-- STM32F103
-- STM32F4
-- ESP32
-- STM32 HAL
-- STM32CubeIDE
-- Embedded C
-- UART communication
-- Peripheral and timer configuration
-
-### Motion Control
-
-- Servo control
-- Multi-servo coordination
-- Servo positioning
-- Stepper motor control
-- Servo + stepper integration
-- Robotic mechanism actuation
-- Locomotion control
-
-### Interfaces & Sensors
-
-- PS4 controller interfaces
-- ESP-based receiver systems
-- UART communication
-- Ultrasonic sensing
-- Distance-based actuation
-
----
-
-# 🔌 Example Control Architecture
-
-Several controller-driven projects follow an architecture similar to:
+## 🔌 Typical Control Architecture
 
 ```text
              PS4 Controller
@@ -234,3 +65,80 @@ Several controller-driven projects follow an architecture similar to:
              └──────┬──────┘
                     ▼
              Robotic Mechanism
+```
+
+---
+
+## 🔵 STM32 Project Set
+
+| Project | Focus |
+|---|---|
+| `SERVO_UART` | Single-servo UART control |
+| `MULTI_SERVO_UART` | Multi-servo UART control |
+| `PS4_SERVO_CONTROLLED` | PS4 → ESP receiver → STM32 → servo |
+| `PS4_PICKING_MECHANISM_CONTROLLED` | Controller-driven robotic picking |
+| `SERVO_WORK_MODE` | Servo operating-mode experiments |
+| `SERVO_STEPPER_INTEGRATION` | Servo + stepper integration |
+| `PS4_SERVO_STEPPER_CTRL` | PS4-controlled servo and stepper system |
+| `PS4_SERVO_STEPPER_LOCO_CONTROLLED` | Controller-based locomotion |
+| `R1_PICKING_MECHANISM` | R1 picking-mechanism control |
+| `SERVO_ANGLE_CONTROL` | Servo positioning and calibration |
+| `STM_F4` | STM32F4 control experiments |
+
+---
+
+## 🟠 ESP32 Project Areas
+
+The ESP32 collection includes additional work around:
+
+- UART servo control
+- multi-servo positioning
+- continuous rotation
+- user-controlled positioning
+- ultrasonic / distance-based actuation
+- PS4 controller interfaces
+- stepper motor control
+- servo-bus configuration
+
+---
+
+## ⚙️ Technical Areas
+
+### Embedded Systems
+- STM32F103
+- STM32F4
+- ESP32
+- STM32 HAL
+- STM32CubeIDE
+- Embedded C
+- UART communication
+- peripheral / timer configuration
+
+### Motion Control
+- servo control
+- multi-servo coordination
+- stepper motor control
+- servo + stepper integration
+- locomotion
+- robotic mechanism actuation
+
+### Interfaces & Sensors
+- PS4 controller input
+- ESP-based receiver interfaces
+- UART links
+- ultrasonic sensing
+- distance-based actuation
+
+---
+
+## 📌 Repository Role
+
+Rather than representing one isolated firmware experiment, this repository documents the progression of embedded-control work that feeds into larger robotic systems.
+
+---
+
+<div align="center">
+
+**Control the mechanism. Integrate the system. Test it on hardware.**
+
+</div>
